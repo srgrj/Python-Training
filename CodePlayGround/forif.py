@@ -1,8 +1,14 @@
-var = "hello world"
-varlen = len(var)
-# print(varlen)
-for i in range(0, varlen):
-    if var[i] == " ":
-        print("\n")
-    else:
-        print(var[i], end='')
+def myfunc(word):
+    op = ""
+    for a, b in enumerate(word):
+        if a == 0:
+            op += b.lower()
+        elif a % 2 == 0:
+            op += b.lower()
+        else:
+            op += b.upper()
+    return op
+
+
+myfunc('Anthropomorphism')
+# Output: 'aNtHrOpOmOrPhIsM'
